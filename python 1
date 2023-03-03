@@ -1,0 +1,33 @@
+#Define the Account class here
+class Account:
+  def __init__(self,accntNo,accntName,accntBalance):
+    self.acctNo=accntNo
+    self.accntName=accntName
+    self.accntBalance=accntBalance
+
+#Define the AccountDemo class here
+class AccountDemo:
+  def __init__(self):
+    pass
+  def depositAmnt(self,acnt,amtdepo):
+    self.update=acnt.accntBalance+amtdepo
+    return self. update
+  def withdrawAmnt(self,Accnt,amtdep):
+    deduct=self.update-amtdep
+    if(deduct<1000):
+      return "No Adequate balance"
+    else:
+      return deduct
+
+#Sample main section.
+#Do not remove the below portion of code.
+if __name__ == '__main__':
+  acno=int(input())
+  acname=input()
+  acntbal=int(input())
+  depamnt=int(input())
+  withamnt=int(input())
+  acnt=Account(acno,acname,acntbal)
+  acntdemoobj=AccountDemo()
+  print(acntdemoobj.depositAmnt(acnt,depamnt))
+  print(acntdemoobj.withdrawAmnt(acnt,withamnt))
